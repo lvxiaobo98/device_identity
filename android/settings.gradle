@@ -1,0 +1,11 @@
+rootProject.name = 'device_identity'
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        // JitPack 远程仓库
+        maven { url 'https://jitpack.io' }
+        // 配置鲸鸿动能SDK的Maven仓地址
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+}
