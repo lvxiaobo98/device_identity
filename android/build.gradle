@@ -9,6 +9,7 @@ buildscript {
         maven { url 'https://www.jitpack.io' }
         // 配置鲸鸿动能SDK的Maven仓地址
         maven { url 'https://developer.huawei.com/repo/' }
+        maven { url 'https://developer.hihonor.com/repo' }
     }
 
     dependencies {
@@ -24,6 +25,7 @@ rootProject.allprojects {
         maven { url 'https://www.jitpack.io' }
         // 配置鲸鸿动能SDK的Maven仓地址
         maven { url 'https://developer.huawei.com/repo/' }
+        maven { url 'https://developer.hihonor.com/repo' }
     }
 }
 
@@ -57,7 +59,7 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.github.gzu-liyujiang:Android_CN_OAID:4.2.6.2'
+    implementation 'com.github.gzu-liyujiang:Android_CN_OAID:4.2.8'
     implementation 'com.huawei.hms:ads-identifier:3.4.62.300'
     //  compileOnly files('libs/oaid_sdk_2.2.0.aar')
 }
