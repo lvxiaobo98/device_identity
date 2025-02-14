@@ -17,7 +17,7 @@ public final class GeneratedPluginRegistrant {
   public static void registerWith(@NonNull FlutterEngine flutterEngine) {
     try {
       flutterEngine.getPlugins().add(new net.niuxiaoer.device_identity.DeviceIdentityPlugin());
-    } catch(Exception e) {
+    } catch (Exception e) {
       Log.e(TAG, "Error registering plugin device_identity, net.niuxiaoer.device_identity.DeviceIdentityPlugin", e);
     }
   }

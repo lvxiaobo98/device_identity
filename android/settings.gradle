@@ -7,5 +7,7 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
         // 配置鲸鸿动能SDK的Maven仓地址
         maven { url 'https://developer.huawei.com/repo/' }
+        //荣耀
+        maven { url 'https://developer.hihonor.com/repo' }
     }
 }

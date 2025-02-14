@@ -61,4 +61,8 @@ class DeviceIdentity {
     return "";
   }
 
+  static platformVersion()async{
+
+  }
+
 }
