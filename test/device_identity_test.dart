@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:device_identity/device_identity.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('device_identity');
@@ -15,9 +14,5 @@ void main() {
 
   tearDown(() {
     channel.setMockMethodCallHandler(null);
-  });
-
-  test('getPlatformVersion', () async {
-    expect(await DeviceIdentity.platformVersion, '42');
   });
 }

@@ -26,24 +26,16 @@ class DeviceIdentityPlugin: FlutterPlugin, MethodCallHandler {
   }
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-
-    when(call.method) {
+    when (call.method) {
       "register" -> {
         deviceIdentityUtil.register()
         result.success(true)
       }
-      "getAndroidID" -> {
-        result.success(deviceIdentityUtil.getAndroidID())
-      }
-      "getIMEI" -> {
-        result.success(deviceIdentityUtil.getIMEI())
-      }
-      "getOAID" -> {
-        result.success(deviceIdentityUtil.getOAID())
-      }
-      "getUA" -> {
-        result.success(deviceIdentityUtil.getUA())
-      }
+      "getAndroidID" -> result.success(deviceIdentityUtil.getAndroidID())
+      "getIMEI" -> result.success(deviceIdentityUtil.getIMEI())
+      "getOAID" -> deviceIdentityUtil.getOAID { oaid -> result.success(oaid) }
+      "getUA" -> result.success(deviceIdentityUtil.getUA())
+      else -> result.notImplemented()
     }
   }
 

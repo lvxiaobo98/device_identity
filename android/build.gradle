@@ -2,7 +2,7 @@ group 'net.niuxiaoer.device_identity'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.9.10'
+    ext.kotlin_version = '1.9.24'
     repositories {
         google()
         mavenCentral()
@@ -13,7 +13,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath 'com.android.tools.build:gradle:8.3.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -66,5 +66,4 @@ dependencies {
     implementation 'com.github.gzu-liyujiang:Android_CN_OAID:4.2.12'
     implementation 'com.huawei.hms:ads-identifier:3.4.62.300'
     implementation "com.hihonor.mcs:ads-identifier:1.0.2.301"
-    //  compileOnly files('libs/oaid_sdk_2.2.0.aar')
 }

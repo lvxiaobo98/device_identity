@@ -4,10 +4,10 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'device_identity'
-  s.version          = '0.0.1'
-  s.summary          = '用于获取设备标识的插件（androidId、Imei、oaid等）'
+  s.version          = '1.1.0'
+  s.summary          = '用于获取设备标识的插件（androidId、Imei、oaid、idfa等）'
   s.description      = <<-DESC
-用于获取设备标识的插件（androidId、Imei、oaid等）
+用于获取设备标识的插件（androidId、Imei、oaid、idfa等）
                        DESC
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }
@@ -15,7 +15,12 @@ Pod::Spec.new do |s|
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.platform = :ios, '8.0'
+  s.platform = :ios, '12.0'
+
+  # AdSupport 提供 ASIdentifierManager（IDFA）
+  # AppTrackingTransparency 提供 ATT 权限申请（iOS 14+），弱引用以兼容 iOS 12/13
+  s.frameworks = 'AdSupport'
+  s.weak_frameworks = 'AppTrackingTransparency'
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
