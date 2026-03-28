@@ -1,1 +1,33 @@
-example/build/
+# Dart / Flutter 工具自动生成
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# 构建产物
+build/
+*.class
+*.jar
+*.war
+*.aar
+
+# Android 构建缓存与本地配置
+.gradle/
+local.properties
+**/GeneratedPluginRegistrant.java
+
+# iOS 自动生成
+**/GeneratedPluginRegistrant.h
+**/GeneratedPluginRegistrant.m
+ios/Pods/
+ios/.symlinks/
+example/ios/Pods/
+example/ios/.symlinks/
+
+# IDE：IntelliJ / Android Studio
+.idea/
+
+# macOS
+.DS_Store
+
+# 覆盖文件
+*.iml
