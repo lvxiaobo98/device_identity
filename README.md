@@ -8,6 +8,25 @@
 device_identity: latestVersion
 ```
 
+### Android 额外配置
+
+由于插件依赖 OAID SDK（JitPack）、华为 HMS、荣耀 SDK 等第三方仓库，需要在宿主项目的 `android/settings.gradle` 中手动声明这些仓库，否则 Kotlin 编译会报 `unresolved reference`。
+
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }                        // OAID
+        maven { url 'https://developer.huawei.com/repo/' }        // 华为 HMS
+        maven { url 'https://developer.hihonor.com/repo' }        // 荣耀
+    }
+}
+```
+
+> 若宿主项目 `settings.gradle` 中没有 `dependencyResolutionManagement` 块（旧版项目），则无需此步骤，插件会自动注入仓库配置。
+
 ---
 
 ## Android 使用

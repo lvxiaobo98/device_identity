@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'device_identity'
-  s.version          = '1.1.0'
+  s.version          = '1.2.0'
   s.summary          = '用于获取设备标识的插件（androidId、Imei、oaid、idfa等）'
   s.description      = <<-DESC
 用于获取设备标识的插件（androidId、Imei、oaid、idfa等）

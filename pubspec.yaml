@@ -1,6 +1,6 @@
 name: device_identity
 description: 用于获取设备标识的插件（androidId、Imei、oaid等）
-version: 1.0.0
+version: 1.2.0
 homepage:
 
 environment:
