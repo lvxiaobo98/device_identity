@@ -58,12 +58,12 @@ class DeviceIdentityUtil(private val context: Context) {
         }
         try {
             DeviceID.getOAID(context, object : IGetter {
-                override fun onSuccessful(oaid: String?) {
-                    mainThread { callback(oaid ?: "") }
+                override fun onOAIDGetComplete(result: String) {
+                    mainThread { callback(result) }
                 }
 
-                override fun onError(e: Exception?) {
-                    Log.e(TAG, "getOAID error", e)
+                override fun onOAIDGetError(error: Exception?) {
+                    Log.e(TAG, "getOAID error", error)
                     mainThread { callback("") }
                 }
             })
